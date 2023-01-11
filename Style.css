@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Poppins', sans-serif;
+    box-sizing: border-box;    
+}
+body{
+    background-color: rgb(99, 96, 96);
+    color: whitesmoke;
+    
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(kepek/background.gif);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10x 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+h1{
+    font-size: 4vh;
+}
+.logo{
+    width: 140px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: url(kepek/axe.png);
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: red;
+    text-decoration: none;
+    font-size: 19px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgb(255, 0, 0) ;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color: red;
+}
+#rolam{
+    font-size: 25px;
+    padding: 80px 0;
+    color: rgb(70, 6, 95);
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.rolam-col-1{
+    flex-basis: 35%;
+}
+.rolam-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.rolam-col-2{
+    flex-basis: 60%;
+}
+.sub{
+    font-size: 60px;
+    font-weight: 600;
+    color: red;
+}
+.title{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-link{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-link::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background:green ;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-link.activ-link::after{
+    width: 50%;
+}
+.tab-tartalomak ul li{
+    list-style: decimal;
+    margin: 10px 0 ;
+}
+.tab-tartalomak ul li span{
+    color: rgb(0, 13, 197);
+    font-size: 14px;
+}
+.tab-tartalomak{
+    display: none;
+}
+.tab-tartalomak.acitv-tab{
+    display: block;
+}
+.kapcsolat-bal{
+    flex-basis: 35%;
+}
+.kapcsolat-jobb{
+    flex-basis: 60%;
+}
+.kapcsolat-bal p{
+    margin-top: 30px;
+
+}
+.kapcsolat-bal p i{
+    color: red;
+    margin-right: 15px;
+    font-size: 30px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: blue;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: red;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: red;
+}
+.kapcsolat-jobb form{
+    width: 100%;
+}
+form input,form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: rgb(219, 215, 215);
+    padding: 15px;
+    margin: 15px 0;
+    color: blueviolet;
+    font-size: 25px;
+    border-radius: 6px;
+}
+form btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20;
+    cursor: pointer;
+}
+footer{
+    margin: 50px;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: blueviolet;
+}
+nav .fa{
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    .header-text{
+        margin-top:100% ;
+        font-size: 16px;
+    } 
+    .header-text h1{
+        font-size: 30px;
+    } 
+    nav .fa{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: grey;
+        position: fixed;
+        top: 0;
+        right: -200;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transform: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa{
+        position: absolute;
+        top:25px;
+        left: 25px;
+        cursor: pointer;
+
+    }
+    .sub{
+        font-size: 40px;
+    }
+    .rolam-col-1, .rolam-col-2{
+        flex-basis: 100%;
+    }
+    .rolam-col-1{
+        margin-bottom: 30px;
+    }
+    .rolam-col-2{
+        font-size: 14px;
+    }
+    .tab-link{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .kapcsolat-bal,.kapcsolat-jobb{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
+
+
+  

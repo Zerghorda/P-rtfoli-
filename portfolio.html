@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Feladat">
+  <meta name="keywords" content="Hobby,stílusok,rólam">
+  <meta name="author" content="Tar Gergő">
+  <link rel="stylesheet" href="Style.css">
+  <script src="https://kit.fontawesome.com/b66e25fa92.js" crossorigin="anonymous"></script>
+  <title>Portfólió</title>
+</head>
+<body>
+<div id="header">
+  <div id="container">
+    <nav>
+      <h1 id="logo">Tar Gergő</h1>
+      <ul id="sidemenu">
+        <li><a href="index.html">Főoldal</a></li>
+        <li><a href="hobby.html">Hobbik</a></li>
+        <li><a href="stilus.html">Portfólió</a></li>
+        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+      </ul>
+      <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+    <div class="header-text">
+      <p>Kezdő/Programozó</p>
+      <h1>Hello<span>Gergő</span>  vagyok!</h1>
+    </div>
+  </div>
+</div>
+<div id="rolam">
+  <div class="containrer">
+    <div class="row">
+      <div class="rolam-col-1">
+        <img src="kepek/work.jpg" alt="me">
+      </div>
+      <div class="rolam-col-2">
+        <h1 class="sub">Rólam</h1>
+        <p>Szeretek videójátékokkal játszani,érdekel az informatika,biologia,ésminden érdekesség.
+          Szeretek sportolni,azon belul is úszni.
+        </p>
+        <div class="title">
+          <p class="tab-link activ-link" onclick="opentab('Kedvenc')">Weblapok</p>
+          <p class="tab-link" onclick="opentab('Cel')" >Pycharm</p>
+        </div>
+        <div class="tab-tartalomak acitv-tab" id="Kedvenc">
+          <ul>
+            <li><a id="links" href="https://zerghorda.github.io/kari/" target="_blank">kari</a></li>
+            <li><a id="links" href="https://zerghorda.github.io/pozitc-k/" target="_blank">pozic-k</a></li>
+            <li><a id="links" href="https://zerghorda.github.io/tabla/" target="_blank">tabla</a></li>
+            <li><a id="links" href="https://zerghorda.github.io/ar-h-z/" target="_blank">ar-h-z</a></li>
+            <li><a id="links" href="https://zerghorda.github.io/gallery-sz-net/" target="_blank">gallery-sz-net</a></li>
+            <li><a id="links" href="https://zerghorda.github.io/git2/" target="_blank">git2</a></li>
+          </ul>
+        </div>
+        <div class="tab-tartalomak" id="Cel">
+          <ul>
+            <li><a id="links" href="munkaim/2023_agazatt_b/"download="2023_agazatt_b">Ágazati dolgozat</a></li>
+            <li><a id="links" href="munkaim/fajlKezeles/" download="fajlKezeles">Fájl kezelés</a></li>
+          </ul>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="kapcsolatok">
+  <div class="contatainer">
+    <div class="row">
+      <div class="kapcsolat-bal">
+        <h1 class="sub">Kapcsolatba léphetsz velem</h1>
+        <p><i class="fa-solid fa-envelope"></i>tar.gergo@outlook.com</p>
+        <p><i class="fa-solid fa-phone"></i>*telefonszám</p>
+        <div class="social-icons">
+          <a href="https://discord.com"><i class="fa-brands fa-discord"></i>ZerghordaHUN#4353</a>
+          <a href="https://store.steampowered.com"><i class="fa-brands fa-steam"></i>ZerghordaHUN</a>
+        </div>
+      </div>
+      <div class="kapcsolat-jobb">
+        <form>
+           <input type="text" name="Név" placeholder="Neve" required>
+           <input type="email" name="email" placeholder="Email-je" required>
+           <textarea name="Üzenet" rows="6" placeholder="Üzeneted"></textarea>
+           <button type="submit" class="btn btn2">Küld</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>Copyright©Készítette Tar Gergő</p>
+  </div>
+</div>
+<script>
+  var tablinks = document.getElementsByClassName("tab-link");
+  var tabtartalomak = document.getElementsByClassName("tab-tartalomak");
+
+  function opentab(tabname){
+    for(tablink of tablinks){
+      tablink.classList.remove("activ-link");
+    }
+    for(tabtartalom of tabtartalomak){
+      tabtartalom.classList.remove("acitv-tab");
+    }
+    event.currentTarget.classList.add("activ-link");
+    document.getElementById(tabname).classList.add("acitv-tab");
+  }
+</script>
+<script>
+  var sidemenu = document.getElementById("sidemenu");
+  function openmenu(){
+    sidemenu.style.right = "0"
+  }
+  function closemenu(){
+    sidemenu.style.right = "-200px"
+  }
+</script>
+</body>
+</html>
