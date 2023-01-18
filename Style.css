@@ -16,6 +16,20 @@ body{
     background-size: cover;
     background-position: center;
 }
+#header2{
+    width: 100%;
+    height: 100vh;
+    background-image: url(kepek/back2.gif);
+    background-size: cover;
+    background-position: center;
+}
+#header3{
+    width: 100%;
+    height: 100vh;
+    background-image: url(kepek/back3.gif);
+    background-size: cover;
+    background-position: center;
+}
 .container{
     padding: 10x 10%;
 }
@@ -33,8 +47,9 @@ h1{
 }
 nav ul li{
     display: inline-block;
-    list-style: url(kepek/axe.png);
+    list-style: none;
     margin: 10px 20px;
+    
 }
 nav ul li a{
     color: red;
@@ -79,13 +94,16 @@ nav ul li a:hover::after{
 }
 .rolam-col-1{
     flex-basis: 35%;
+    padding: 10px;
 }
 .rolam-col-1 img{
     width: 100%;
     border-radius: 15px;
+    padding: 10;
 }
 .rolam-col-2{
     flex-basis: 60%;
+    padding: 10px;
 }
 .sub{
     font-size: 60px;
@@ -141,18 +159,21 @@ nav ul li a:hover::after{
 }
 .kapcsolat-bal{
     flex-basis: 35%;
+    padding: 10px;
 }
 .kapcsolat-jobb{
     flex-basis: 60%;
 }
 .kapcsolat-bal p{
     margin-top: 30px;
+    padding: 10px;
 
 }
 .kapcsolat-bal p i{
     color: red;
     margin-right: 15px;
     font-size: 30px;
+    padding: 20px;
 }
 .social-icons{
     margin-top: 30px;
@@ -175,6 +196,7 @@ nav ul li a:hover::after{
 }
 .kapcsolat-jobb form{
     width: 100%;
+    padding: 20px;
 }
 form input,form textarea{
     width: 100%;
@@ -187,7 +209,7 @@ form input,form textarea{
     font-size: 25px;
     border-radius: 6px;
 }
-form btn2{
+form.btn2{
     padding: 14px 60px;
     font-size: 18px;
     margin-top: 20;
@@ -202,7 +224,7 @@ footer{
     padding: 25px 0;
     background: rgb(110, 109, 110);
 }
-nav .fa{
+nav .fa-solid{
     display: none;
 }
 @media screen and (max-width: 600px) {
@@ -213,7 +235,7 @@ nav .fa{
     .header-text h1{
         font-size: 30px;
     } 
-    nav .fa{
+    nav .fa-solid{
         display: block;
         font-size: 25px;
     }
@@ -260,6 +282,10 @@ nav .fa{
     }
     .copyright{
         font-size: 14px;
+        
+    }
+    .copyright.social-icons{
+        size-adjust: calc();
     }
 }
 
